@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tela de Login</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../global.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="formulario">
+            <form action="http://localhost:3333/login" name="cadastro" method="POST">
+                <div class="entrada">
+                    <label for="matricula-email">E-mail/Matricula</label>
+                    <input type="text" name="matricula" id="matricula-email" required/>
+                </div>
+                <div class="entrada">
+                    <label for="senha">Senha</label>
+                    <input type="text" name="senha" id="senha" required/>
+                </div>
+                <button>Conecte-se</button>
+                <a href="../rec_senha/rec_senha.html">Esqueci Minha Senha</a>
+            </form>
+        </div>
+    </body>
+</html>

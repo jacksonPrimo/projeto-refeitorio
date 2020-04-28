@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tela de Login</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../global.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="formulario">
+            <form action="http://localhost:3333/recuperarSenha" name="recuperar" method="POST">
+                <div class="entrada">
+                    <label id="matricula-email">Informe seu E-mail</label>
+                    <input type="text" name="matricula"/>
+                </div>
+                <div class="enviar-voltar">
+                    <button>Enviar</button>
+                    <a href="../login/login.html">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </body>
+    <script>
+        document.recuperar.onsubmit = e =>{
+            alert('uma mensagem contendo sua antiga senha foi enviada ao seu email, além de um link para alteração caso desejar')
+        }
+    </script>
+</html>

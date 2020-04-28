@@ -1,0 +1,49 @@
+.formulario{
+    background-color: RGBA(127,127,127,0.25);
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario form{
+    width: 80%;
+    height: 85%;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+form .entrada{
+    margin: 5px 15px;
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+}
+form .entrada input{
+    margin-top: 10px;
+    height: 30px;
+    border: 2px solid RGBA(127,127,127,0.3);
+}
+
+.formulario form button{
+    margin: 15px 0px;
+    width: 110px;
+}
+
+.formulario a{
+    color: green;
+    text-decoration: none;
+}
+
+@media(max-width: 1200px){
+    .formulario form{
+        margin: 15px 0px;
+    }
+    form .entrada{
+        width: 70%;
+    }   
+}
