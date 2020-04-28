@@ -1,0 +1,143 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    font-family:'Bangers', cursive;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: logo;
+    background-color: teal;
+}
+.logo a{
+    color: white;
+    text-decoration: none;
+}
+.logo a span{
+    font-family:'Bangers', cursive;
+    font-size: 25px;
+}
+.barra_superior{
+    grid-area:  barra_sup;
+    background-color: rgb(8, 155, 155);
+}
+/*======================================== MENU ========================================*/
+.menu{
+    grid-area: menu;
+    background-color: rgb(54, 53, 53);
+}
+.menu ul{
+    width: 100%;
+    height: 100%;
+}
+.menu ul li{
+    display: flex;
+    align-items: center;
+    height: 10%;
+    width: calc(100% - 20px);
+    font-size: 20px;
+    list-style: none;
+    color: white;
+    margin: 20px 20px;
+}
+.menu ul li:hover{
+    background-color: rgb(37, 37, 37);
+}
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul .matricula_e_foto{
+    font-size: 26px;
+}
+.menu ul .matricula_e_foto span{
+    margin-left: 10px;
+}
+.menu ul li img{
+    width: 40px;
+    height: 40px;
+    border-radius: 16px;
+}
+/*==================================== AUSENCIAS ============================================*/
+
+.ausencias{
+    grid-area: ausencias;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 26px;
+}
+
+/*================================= OPÇÔES ===============================================*/
+.cardapio_e_opçoes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: card_e_opc;
+    background-color: rgba(127,127,127,0.25);
+}
+.cardapio_e_opçoes .opçoes{
+    height: 20%;
+    width: 100%;
+}
+.cardapio_e_opçoes .opçoes ul{
+    margin-top: 15px;
+    width: 100%;
+    height: 80%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.cardapio_e_opçoes .opçoes ul li{
+    background-color: white;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 6px;
+}
+.cardapio_e_opçoes .opçoes ul li button{
+    height: 100%;
+    width: 25%;
+}
+.cardapio_e_opçoes .opçoes ul li .text-button{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size:25px;
+}
+.cardapio_e_opçoes .opçoes ul li .agendar{
+    background-color: rgb(8, 155, 155);
+}
+.cardapio_e_opçoes .opçoes ul li .time{
+    background-color:rgb(231, 231, 16);
+}
+.cardapio_e_opçoes .opçoes ul li .cancelar{
+    background-color:rgb(223, 10, 10);
+}
+
+/*================================== GRID AREAS ==================================================*/
+body{
+    display: grid;
+    grid-template-rows: 1fr 1fr 8fr;
+    grid-template-columns: 2fr 8fr;
+    grid-template-areas: 
+        "logo barra_sup"
+        "menu ausencias"
+        "menu card_e_opc"
+}
