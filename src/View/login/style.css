@@ -34,7 +34,14 @@ form .entrada input{
     width: 110px;
 }
 
-.formulario a{
+.formulario ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario ul li a{
     color: green;
     text-decoration: none;
 }

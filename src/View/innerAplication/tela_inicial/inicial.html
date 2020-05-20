@@ -9,15 +9,17 @@
     </head>
     <body>
         <div class="logo">
-            <a href="google.com">
+            <a>
                 <i class="material-icons">local_dining</i>
                 <span>Restaurante</span>
             </a>
         </div>
         <div class="barra_superior">
+            <button><i class="button-menu material-icons">menu</i></button>
+            <button class="ign"><i class="button-menu material-icons">logout</i></button>
         </div>
         <div class="menu">
-            <ul>
+            <ul class="lista_menu">
                 <li class="matricula_e_foto">
                     <img src="img.jpg">
                     <span>matricula</span>
@@ -48,16 +50,16 @@
                         </button>
                         <div class="text-button">
                             <span>Agendar</span>
-                            <span>### Vagas Restantes</span>
+                            <span class="infobutton">### Vagas Restantes</span>
                         </div>
                     </li>
                     <li>
                         <button class="time">
                             <i class="material-icons">access_time</i>
                         </button>
-                        <div class="text-button">
+                        <div class="text-button ignore">
                             <span>Tempo Restante:</span>
-                            <span>DD:HH:MM:SS</span>
+                            <span class="infobutton">DD:HH:MM:SS</span>
                         </div>
                     </li>
                     <li>
@@ -71,8 +73,35 @@
                 </ul>
             </div>
             <div class="cardapio">
-
+                <h1>Cardápio Da Semana</h1>
+                <table>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Cardápio</th>
+                    </tr>
+                    <tr>
+                        <td>segunda-feira</td>
+                        <td>arroz Maria Izabel</td>
+                    </tr>
+                    <tr>
+                        <td>terça-feira</td>
+                        <td>Sopa</td>
+                    </tr>
+                    <tr>
+                        <td>quarta-feira</td>
+                        <td>strogonoff de carne</td>
+                    </tr>
+                    <tr>
+                        <td>quinta-feira</td>
+                        <td>Cozidão de Legumes</td>
+                    </tr>
+                    <tr>
+                        <td>sexta-feira</td>
+                        <td>Peixe empanado</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </body>
+    <script src="./dom.js"></script>
 </html>

@@ -9,6 +9,7 @@ html,body{
     height: 100%;
     width: 100%;
 }
+/*==========================LOGO=======================================*/
 .logo{
     display: flex;
     justify-content: center;
@@ -24,9 +25,26 @@ html,body{
     font-family:'Bangers', cursive;
     font-size: 25px;
 }
+/*================================Barra Superior=================================================*/
 .barra_superior{
     grid-area:  barra_sup;
     background-color: rgb(8, 155, 155);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+.barra_superior button{
+    display: block;
+    background-color: transparent;
+}
+.barra_superior button .material-icons{
+    font-size: 40px;
+}
+
+.barra_superior button:hover{
+    cursor: pointer;
 }
 /*======================================== MENU ========================================*/
 .menu{
@@ -111,6 +129,13 @@ html,body{
 .cardapio_e_opçoes .opçoes ul li button{
     height: 100%;
     width: 25%;
+    border-radius: 6px;
+}
+.cardapio_e_opçoes .opçoes ul li button .material-icons{
+    font-size: 40px;
+}
+.cardapio_e_opçoes .opçoes ul li button:hover{
+    cursor: pointer;
 }
 .cardapio_e_opçoes .opçoes ul li .text-button{
     width: 75%;
@@ -121,6 +146,9 @@ html,body{
     align-items: center;
     font-size:25px;
 }
+.cardapio_e_opçoes .opçoes ul li .text-button .infobutton{
+    font-size:16px;
+}
 .cardapio_e_opçoes .opçoes ul li .agendar{
     background-color: rgb(8, 155, 155);
 }
@@ -130,7 +158,24 @@ html,body{
 .cardapio_e_opçoes .opçoes ul li .cancelar{
     background-color:rgb(223, 10, 10);
 }
-
+/*====================================== CARDAPIO ==============================================*/
+.cardapio_e_opçoes .cardapio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardapio_e_opçoes .cardapio h1{
+    margin: 15px 0px;
+}
+.cardapio_e_opçoes .cardapio table tr{
+    font-size: 25px;
+    padding: 10px;
+    color: rgb(219, 217, 217);
+    background-color: teal;
+}
+.cardapio_e_opçoes .cardapio table td, th{
+    padding: 10px;
+}
 /*================================== GRID AREAS ==================================================*/
 body{
     display: grid;
@@ -140,4 +185,40 @@ body{
         "logo barra_sup"
         "menu ausencias"
         "menu card_e_opc"
+}
+/*======================================= ADAPTAÇÃO DO DISPLAY =================================================*/
+@media(max-width: 700px){
+    body{
+        grid-template-areas: 
+            "barra_sup barra_sup"
+            "ausencias ausencias"
+            "card_e_opc card_e_opc"
+    }
+    .menu, .logo{
+        display: none;
+    }
+
+    /*
+    .cardapio_e_opçoes .opçoes ul li button{
+        width: 100%;
+    }
+    .cardapio_e_opçoes .opçoes ul li .time{
+        display: none;
+    }
+    .cardapio_e_opçoes .opçoes ul li .text-button:not(.ignore){
+        display: none;
+    }*/
+
+
+
+    .cardapio_e_opçoes .opçoes ul li button .material-icons{
+        font-size: 30px;
+    }
+    .cardapio_e_opçoes .opçoes ul li{
+        justify-content: center;
+    }
+    .cardapio_e_opçoes .opçoes ul li .text-button{
+        font-size: 25px;
+        text-align: center;
+    }
 }
