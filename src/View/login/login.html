@@ -40,9 +40,13 @@
                     if(resp.erro){
                         alert(resp.erro)
                     }else{
-                        console.log(resp)
+                        for(i in resp){
+                            localStorage.setItem(i, resp[i])
+                        }
                         //se o erro não estiver settado então significa que o login foi feito com sucesso e podemos 
                         //passar para a proxima pagina
+                        console.log(localStorage)
+                        window.location.href = ('http://localhost:3333/innerAplication/tela_inicial/inicial.html')
                     }
                 })
                 .catch(e=>{

@@ -1,4 +1,4 @@
-let button_menu = document.querySelector('.button-menu')
+let button_menu = document.querySelector('#b-m')
 let menu = document.querySelector('.menu')
 let logo = document.querySelector('.logo')
 let ativo = false
@@ -59,4 +59,11 @@ $('.agendar').one('click', (e)=>{
 $('.cancelar').one('click', (e)=>{
     TR.iniciar()
     $('.reserva').html('Agendamento Cancelado')
+})
+
+$('#b-l').click(e=>{
+    for(i in localStorage){
+        localStorage.removeItem(i)
+    }
+    window.location.href = ('http://localhost:3333/home/home.html')
 })
