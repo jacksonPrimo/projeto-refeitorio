@@ -25,3 +25,38 @@ button_menu.addEventListener('click', function(){
     }
     console.log('clicou')
 })
+
+class tempoRestante{
+    iniciar=(e)=>{
+        this.acumulador = setInterval(()=>{
+            let tempo = new Date().toLocaleString('pt-Br').split(' ')[1]
+            let horas = parseInt(tempo.split(':')[0])
+            let minutos = parseInt(tempo.split(':')[1])
+            let segundos = parseInt(tempo.split(':')[2])
+            let horasRes;
+            if(horas > 13){
+                horasRes = 24 - (horas - 13)
+            }else{
+                horasRes = 13 - horas
+            }
+            let minutosRes = minutos == 0 ? 0 : 60 - minutos
+            let segundosRes = segundos == 0 ? 0 : 60 - segundos
+            $('#horasRes').html(`<span>${horasRes}:${minutosRes}:${segundosRes}</span>`)
+        }, 1000);
+    }
+    parar=(e)=>{
+        console.log('jj')
+        clearInterval(this.acumulador)
+        $('#horasRes').empty()
+    }    
+}
+const TR = new tempoRestante()
+$('body').ready(TR.iniciar)
+$('.agendar').one('click', (e)=>{
+    TR.parar()
+    $('.reserva').html('Agendamento Confirmado')
+})
+$('.cancelar').one('click', (e)=>{
+    TR.iniciar()
+    $('.reserva').html('Agendamento Cancelado')
+})

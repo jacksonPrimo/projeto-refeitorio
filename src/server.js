@@ -16,6 +16,8 @@ app.use(express.static(__dirname + '/View'))
 app.get('/', (req, res)=>{res.send('esta funcionando')})
 app.use(Routes)
 
-app.listen(3333, ()=>{
-    console.log('servidor rodando na porta 3333')
+var server = app.listen(3333, ()=>{
+    let host = server.address().address
+    let port = server.address().port
+    console.log('Example app listening at http://%s:%s', host, port)
 })

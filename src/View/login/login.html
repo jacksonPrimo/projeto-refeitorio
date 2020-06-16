@@ -25,4 +25,29 @@
             </form>
         </div>
     </body>
+    <script>
+        document.cadastro.onsubmit = e =>{
+            e.preventDefault()
+            const form = e.target
+            const data = new FormData(form)
+            const options ={
+                method: form.method,
+                body: new URLSearchParams(data)
+            }
+            fetch(form.action, options)
+                .then(resp=> resp.json())
+                .then(resp=>{
+                    if(resp.erro){
+                        alert(resp.erro)
+                    }else{
+                        console.log(resp)
+                        //se o erro não estiver settado então significa que o login foi feito com sucesso e podemos 
+                        //passar para a proxima pagina
+                    }
+                })
+                .catch(e=>{
+                    console.log(e)
+                })
+        }
+    </script>
 </html>

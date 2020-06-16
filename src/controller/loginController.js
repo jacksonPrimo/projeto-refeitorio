@@ -1,7 +1,9 @@
 const User = require('../model/User')
+const express = require('express')
 module.exports = {
     async autenticar(req, res){
         const mat = req.body.matricula
+        //localStorage.setItem("matricula", mat)
         const senha = req.body.senha
         const user = await User.findOne({matricula: mat}, {}) 
         if(user){
@@ -9,11 +11,11 @@ module.exports = {
                 res.json(user)
             }
             else{
-                res.send('autorização negada')
+                res.json({"erro":"autorização negada"})
             }
         }
         else{
-            res.send('matricula informada invalida')
+            res.json({"erro":"matricula informada invalida"})
         }
     }
 }
