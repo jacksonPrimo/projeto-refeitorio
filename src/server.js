@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express()
 const Routes = require('./routes')
 
-mongoose.connect('mongodb+srv://jackson:toradora@minhaaplicacao-jexsg.mongodb.net/meuDB?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
